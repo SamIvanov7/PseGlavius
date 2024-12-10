@@ -1,0 +1,279 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <base href="./">
+    <title>Transactions - Pseglavius Drones Ltd</title>
+    <meta name="description" content="Manage Your Transactions and Balance" />
+    <link rel="icon" sizes="any" href="assets/svg/favicon-default.svg" type="image/svg+xml">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+    <link href="css/slides-customized.min.css?p=ghFS4UVm" rel="stylesheet" type="text/css">
+    <link href="css/custom.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" as="font" href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;700&family=Material+Icons&display=swap"/>
+
+    <style>
+        .transaction-tabs {
+            background: #F2F2F2;
+            border-radius: 40px;
+            padding: 10px;
+            margin-bottom: 30px;
+        }
+        .transaction-tabs .tab {
+            padding: 15px 30px;
+            border-radius: 30px;
+            color: #999999;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        .transaction-tabs .tab.active {
+            background: #5569FF;
+            color: #ffffff;
+        }
+        .transaction-content {
+            background: #F2F2F2;
+            border-radius: 40px;
+            padding: 40px;
+        }
+        .transaction-table {
+            width: 100%;
+            border-collapse: separate;
+            border-spacing: 0 10px;
+        }
+        .transaction-table th {
+            color: #999999;
+            font-weight: 500;
+            padding: 15px;
+            text-align: left;
+        }
+        .transaction-table td {
+            background: #ffffff;
+            padding: 20px 15px;
+        }
+        .transaction-table tr td:first-child {
+            border-radius: 15px 0 0 15px;
+        }
+        .transaction-table tr td:last-child {
+            border-radius: 0 15px 15px 0;
+        }
+        .status-badge {
+            padding: 8px 15px;
+            border-radius: 20px;
+            font-size: 14px;
+            font-weight: 500;
+        }
+        .status-success {
+            background: #d4edda;
+            color: #155724;
+        }
+        .status-pending {
+            background: #fff3cd;
+            color: #856404;
+        }
+        .network-option {
+            background: #F2F2F2;
+            border-radius: 30px;
+            padding: 25px;
+            margin-bottom: 20px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border: 1px solid #999999;
+        }
+        .network-option:hover {
+            border-color: #5569FF;
+        }
+        .network-option.selected {
+            border-color: #5569FF;
+            background: rgba(85, 105, 255, 0.1);
+        }
+        .address-box {
+            background: #ffffff;
+            border-radius: 15px;
+            padding: 15px;
+            margin-top: 15px;
+        }
+        .button.transaction-btn {
+            background: #5569FF;
+            color: #fff;
+            border-radius: 30px;
+            padding: 15px 30px;
+            font-size: 16px;
+            font-weight: 500;
+            border: none;
+        }
+        .button.transaction-btn:hover {
+            background: #4050CC;
+        }
+    </style>
+</head>
+
+<body class="slides stack smooth fast stickyScroll animated noPreload">
+    <!-- Navigation -->
+    <nav class="sidebar" data-sidebar-id="1">
+        <div class="close"><svg><use href="assets/svg/icons.svg#close"></use></svg></div>
+        <div class="content">
+            <a href="#" class="logo"><svg width="100" height="30"><use href="assets/svg/icons.svg#logo"></use></svg></a>
+            <ul class="mainMenu margin-top-3">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="purchase-equipment.html">Purchase Equipment</a></li>
+                <li><a href="transactions.html" class="selected">Transactions</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="slide whiteSlide wallpapers-background">
+        <div class="content">
+            <div class="container">
+                <div class="wrap">
+                    <div class="fix-12-12">
+                        <!-- Transaction Tabs -->
+                        <div class="transaction-tabs">
+                            <div class="grid equal">
+                                <div class="col-4-12 center">
+                                    <div class="tab active" data-tab="history">Transaction History</div>
+                                </div>
+                                <div class="col-4-12 center">
+                                    <div class="tab" data-tab="topup">Top Up Balance</div>
+                                </div>
+                                <div class="col-4-12 center">
+                                    <div class="tab" data-tab="withdraw">Withdraw Funds</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Transaction History -->
+                        <div class="transaction-content" id="history-content">
+                            <div class="grid margin-bottom-2">
+                                <div class="col-8-12">
+                                    <h2 class="smallest">Transaction History</h2>
+                                </div>
+                                <div class="col-4-12 right">
+                                    <a href="#" class="button transaction-btn"><i class="material-icons">download</i> Export CSV</a>
+                                </div>
+                            </div>
+
+                            <div class="table-responsive">
+                                <table class="transaction-table">
+                                    <thead>
+                                        <tr>
+                                            <th>Date</th>
+                                            <th>Operation Type</th>
+                                            <th>Amount (USDT)</th>
+                                            <th>Status</th>
+                                            <th>Details</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>2024-01-09</td>
+                                            <td>Drone Purchase</td>
+                                            <td>500.00</td>
+                                            <td><span class="status-badge status-success">Successful</span></td>
+                                            <td><a href="#" class="button transaction-btn">View</a></td>
+                                        </tr>
+                                        <tr>
+                                            <td>2024-01-08</td>
+                                            <td>Balance Top-up</td>
+                                            <td>1000.00</td>
+                                            <td><span class="status-badge status-pending">Pending</span></td>
+                                            <td><a href="#" class="button transaction-btn">View</a></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+
+                        <!-- Top Up Balance -->
+                        <div class="transaction-content" id="topup-content" style="display: none;">
+                            <h2 class="smallest margin-bottom-2">Top Up Balance</h2>
+
+                            <div class="grid">
+                                <div class="col-6-12 col-tablet-1-1">
+                                    <h3 class="small bold margin-bottom-2">Select Network</h3>
+                                    <div class="network-option">
+                                        <img src="assets/images/trc20.png" alt="TRC20" height="30">
+                                        <span class="margin-left-1">TRC20</span>
+                                    </div>
+                                    <div class="network-option">
+                                        <img src="assets/images/polygon.png" alt="Polygon" height="30">
+                                        <span class="margin-left-1">Polygon</span>
+                                    </div>
+
+                                    <div class="margin-top-2">
+                                        <h3 class="small bold margin-bottom-1">Deposit Address</h3>
+                                        <div class="address-box">
+                                            <div class="grid">
+                                                <div class="col-9-12">
+                                                    <code id="depositAddress">TRC20address...</code>
+                                                </div>
+                                                <div class="col-3-12 right">
+                                                    <a href="#" class="button transaction-btn">Copy</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-6-12 col-tablet-1-1">
+                                    <div class="network-option">
+                                        <h3 class="small bold margin-bottom-1">Instructions</h3>
+                                        <ol class="margin-left-2">
+                                            <li>Select your preferred network</li>
+                                            <li>Copy the deposit address</li>
+                                            <li>Send USDT to the address</li>
+                                            <li>Wait for network confirmation</li>
+                                            <li>Your balance will be updated automatically</li>
+                                        </ol>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Withdraw Funds -->
+                        <div class="transaction-content" id="withdraw-content" style="display: none;">
+                            <h2 class="smallest margin-bottom-2">Withdraw Funds</h2>
+
+                            <div class="grid">
+                                <div class="col-6-12 col-tablet-1-1">
+                                    <form>
+                                        <label class="margin-bottom-1">Amount to Withdraw (USDT)</label>
+                                        <input type="number" class="margin-bottom-2" placeholder="Enter amount">
+
+                                        <label class="margin-bottom-1">Select Network</label>
+                                        <select class="margin-bottom-2">
+                                            <option value="trc20">TRC20</option>
+                                            <option value="polygon">Polygon</option>
+                                        </select>
+
+                                        <label class="margin-bottom-1">Withdrawal Address</label>
+                                        <input type="text" class="margin-bottom-2" placeholder="Enter your wallet address">
+
+                                        <a href="#" class="button transaction-btn">Submit Withdrawal Request</a>
+                                    </form>
+                                </div>
+
+                                <div class="col-6-12 col-tablet-1-1">
+                                    <div class="network-option">
+                                        <h3 class="small bold margin-bottom-1">Withdrawal Information</h3>
+                                        <ul class="margin-left-2">
+                                            <li>Minimum withdrawal: 10 USDT</li>
+                                            <li>Processing time: 1-24 hours</li>
+                                            <li>Network fee will be deducted from withdrawal amount</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/transactions.js"></script>
+</body>
+</html>

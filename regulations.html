@@ -1,0 +1,349 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <base href="./">
+    <title>Drone Regulations & Compliance - Pseglavius Drones Ltd</title>
+    <meta property="og:title" content="Drone Regulations & Compliance - Pseglavius Drones Ltd" />
+    <meta name="twitter:title" content="Drone Regulations & Compliance - Pseglavius Drones Ltd" />
+    <meta name="description" content="Understanding drone regulations and compliance requirements across global markets" />
+    <meta name="og:description" content="Understanding drone regulations and compliance requirements across global markets" />
+    <meta name="twitter:description" content="Understanding drone regulations and compliance requirements across global markets" />
+    <link rel="icon" sizes="any" href="assets/svg/favicon-default.svg" type="image/svg+xml">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+    <link href="css/slides-customized.min.css" rel="stylesheet" type="text/css">
+    <link href="css/custom_GzhMgOBD.css" rel="stylesheet" type="text/css">
+
+    <!-- Fonts and Material Icons -->
+    <link rel="stylesheet" as="font" href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;700&family=Material+Icons&display=swap"/>
+
+    <style>
+        .slides,
+        .slides p {
+            font-family: "Nunito", -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
+            font-weight: 400;
+        }
+        .slides h1,
+        .slides h2,
+        .slides h3,
+        .slides h4,
+        .slides h5,
+        .slides h6 {
+            font-family: "Nunito", -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
+            font-weight: 700;
+        }
+        .regulation-header {
+            background: linear-gradient(135deg, #1a237e, #0d47a1);
+            color: white;
+            padding: 60px 0;
+            text-align: center;
+            border-radius: 0 0 50px 50px;
+        }
+        .regulation-card {
+            background: white;
+            border-radius: 20px;
+            padding: 30px;
+            margin: 20px 0;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+        .regulation-card:hover {
+            transform: translateY(-5px);
+        }
+        .requirement-list {
+            list-style: none;
+            padding: 0;
+        }
+        .requirement-item {
+            display: flex;
+            align-items: flex-start;
+            margin: 15px 0;
+            padding: 15px;
+            background: #f8f9fa;
+            border-radius: 10px;
+        }
+        .requirement-icon {
+            color: #1976D2;
+            margin-right: 15px;
+            font-size: 24px;
+        }
+        .compliance-steps {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin: 30px 0;
+        }
+        .step-card {
+            flex: 1;
+            min-width: 250px;
+            background: white;
+            padding: 25px;
+            border-radius: 15px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        .step-number {
+            background: #1976D2;
+            color: white;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 15px;
+        }
+        .regulation-tabs {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin: 30px 0;
+            flex-wrap: wrap;
+        }
+        .regulation-tab {
+            padding: 10px 20px;
+            background: #f8f9fa;
+            border-radius: 20px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        .regulation-tab:hover,
+        .regulation-tab.active {
+            background: #1976D2;
+            color: white;
+        }
+        .certification-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            margin: 30px 0;
+        }
+        .certification-card {
+            background: white;
+            padding: 25px;
+            border-radius: 15px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+        .certification-icon {
+            font-size: 48px;
+            color: #1976D2;
+            margin-bottom: 15px;
+        }
+        .updates-section {
+            background: #f8f9fa;
+            padding: 40px;
+            border-radius: 20px;
+            margin: 40px 0;
+        }
+        .update-card {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 15px 0;
+            border-left: 4px solid #1976D2;
+        }
+        .resources-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin: 30px 0;
+        }
+        .resource-card {
+            background: white;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            display: flex;
+            align-items: center;
+        }
+        .resource-icon {
+            font-size: 36px;
+            color: #1976D2;
+            margin-right: 15px;
+        }
+    </style>
+</head>
+<body class="slides animated noPreload">
+<!-- Navigation -->
+<nav class="side square medium">
+  <div class="navigation default">
+    <ul></ul>
+  </div>
+</nav>
+
+<!-- Panel Top -->
+<nav class="panel top">
+  <div class="sections desktop">
+    <div class="left"><a href="index.html">Pseglavius</a></div>
+    <div class="center">
+      <ul class="menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about-us.html">About</a></li>
+        <li><a href="international.html">Global</a></li>
+        <li><a href="contact-support.html">Support</a></li>
+      </ul>
+    </div>
+    <div class="right"><a href="register.html" class="button blue rounded">Get Started</a></div>
+  </div>
+</nav>
+
+<!-- Regulations Content -->
+<section class="slide">
+    <div class="regulation-header">
+        <div class="container">
+            <h1>Drone Regulations & Compliance</h1>
+            <p class="larger opacity-8">Understanding global drone operation requirements</p>
+        </div>
+    </div>
+
+    <div class="content">
+        <div class="container">
+            <div class="wrap">
+                <div class="fix-12-12">
+                    <div class="regulation-tabs">
+                        <div class="regulation-tab active">Overview</div>
+                        <div class="regulation-tab">Commercial Use</div>
+                        <div class="regulation-tab">Certifications</div>
+                        <div class="regulation-tab">Insurance</div>
+                    </div>
+
+                    <div class="regulation-card">
+                        <h3>Key Requirements</h3>
+                        <ul class="requirement-list">
+                            <li class="requirement-item">
+                                <span class="material-icons requirement-icon">verified_user</span>
+                                <div>
+                                    <h4>Pilot Certification</h4>
+                                    <p>Commercial drone operators must obtain relevant certifications based on their region of operation.</p>
+                                </div>
+                            </li>
+                            <li class="requirement-item">
+                                <span class="material-icons requirement-icon">flight_takeoff</span>
+                                <div>
+                                    <h4>Flight Registration</h4>
+                                    <p>All drones must be registered with local aviation authorities and display registration numbers.</p>
+                                </div>
+                            </li>
+                            <li class="requirement-item">
+                                <span class="material-icons requirement-icon">policy</span>
+                                <div>
+                                    <h4>Insurance Coverage</h4>
+                                    <p>Comprehensive insurance coverage is mandatory for commercial drone operations.</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="compliance-steps">
+                        <div class="step-card">
+                            <div class="step-number">1</div>
+                            <h4>Registration</h4>
+                            <p>Register your drone with local aviation authorities</p>
+                        </div>
+                        <div class="step-card">
+                            <div class="step-number">2</div>
+                            <h4>Certification</h4>
+                            <p>Obtain necessary pilot certifications</p>
+                        </div>
+                        <div class="step-card">
+                            <div class="step-number">3</div>
+                            <h4>Insurance</h4>
+                            <p>Secure required insurance coverage</p>
+                        </div>
+                        <div class="step-card">
+                            <div class="step-number">4</div>
+                            <h4>Operation</h4>
+                            <p>Begin compliant drone operations</p>
+                        </div>
+                    </div>
+
+                    <div class="certification-grid">
+                        <div class="certification-card">
+                            <span class="material-icons certification-icon">school</span>
+                            <h4>Remote Pilot Certificate</h4>
+                            <p>Required for commercial drone operations</p>
+                        </div>
+                        <div class="certification-card">
+                            <span class="material-icons certification-icon">flight</span>
+                            <h4>Part 107 Certification</h4>
+                            <p>FAA certification for US operations</p>
+                        </div>
+                        <div class="certification-card">
+                            <span class="material-icons certification-icon">public</span>
+                            <h4>International Licenses</h4>
+                            <p>Region-specific certifications</p>
+                        </div>
+                    </div>
+
+                    <div class="updates-section">
+                        <h3>Recent Regulatory Updates</h3>
+                        <div class="update-card">
+                            <h4>Remote ID Implementation</h4>
+                            <p>New requirements for drone identification and tracking</p>
+                            <small>Effective: September 2024</small>
+                        </div>
+                        <div class="update-card">
+                            <h4>BVLOS Operations</h4>
+                            <p>Updated guidelines for beyond visual line of sight operations</p>
+                            <small>Effective: January 2024</small>
+                        </div>
+                    </div>
+
+                    <div class="resources-grid">
+                        <div class="resource-card">
+                            <span class="material-icons resource-icon">book</span>
+                            <div>
+                                <h4>Regulatory Guide</h4>
+                                <p>Download our comprehensive guide</p>
+                            </div>
+                        </div>
+                        <div class="resource-card">
+                            <span class="material-icons resource-icon">support_agent</span>
+                            <div>
+                                <h4>Compliance Support</h4>
+                                <p>Get help with regulations</p>
+                            </div>
+                        </div>
+                        <div class="resource-card">
+                            <span class="material-icons resource-icon">update</span>
+                            <div>
+                                <h4>Updates Newsletter</h4>
+                                <p>Stay informed about changes</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="margin-top-4 center">
+                        <h3>Need Help with Compliance?</h3>
+                        <p class="larger opacity-8">Our team of experts is here to guide you through the regulatory process</p>
+                        <div class="margin-top-3">
+                            <a href="contact-support.html" class="button blue rounded-40">Contact Support</a>
+                            <a href="resources/regulatory-guide.pdf" class="button white rounded-40">Download Guide</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- jQuery 3.6.0 -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<!-- Compressed Scripts -->
+<script src="js/slides.min.js" type="text/javascript"></script>
+
+<script>
+$(document).ready(function() {
+    // Tab switching functionality
+    $('.regulation-tab').click(function() {
+        $('.regulation-tab').removeClass('active');
+        $(this).addClass('active');
+        // Add content switching logic here
+    });
+});
+</script>
+</body>
+</html>
