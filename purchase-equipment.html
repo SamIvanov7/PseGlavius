@@ -1,0 +1,219 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <base href="./">
+    <title>Purchase Equipment - Pseglavius Drones Ltd</title>
+    <meta name="description" content="Purchase Autonomous Drones and Equipment" />
+    <link rel="icon" sizes="any" href="assets/svg/favicon-default.svg" type="image/svg+xml">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+    <link href="css/slides-customized.min.css?p=ghFS4UVm" rel="stylesheet" type="text/css">
+    <link href="css/custom.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" as="font" href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;700&family=Material+Icons&display=swap"/>
+
+    <style>
+        .progress-steps {
+            padding: 20px 0;
+            position: relative;
+            background: #F2F2F2;
+            border-radius: 40px;
+            margin-bottom: 30px;
+        }
+        .step-indicator {
+            display: flex;
+            justify-content: space-between;
+            padding: 0 40px;
+        }
+        .step {
+            text-align: center;
+            position: relative;
+            flex: 1;
+        }
+        .step-circle {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: #ffffff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 10px;
+            position: relative;
+            z-index: 2;
+            border: 2px solid #999999;
+            color: #999999;
+            font-weight: 700;
+        }
+        .step.active .step-circle {
+            background-color: #5569FF;
+            border-color: #5569FF;
+            color: white;
+        }
+        .step-title {
+            font-size: 16px;
+            color: #999999;
+            font-weight: 500;
+        }
+        .step.active .step-title {
+            color: #5569FF;
+        }
+        .drone-card {
+            background: #F2F2F2;
+            border-radius: 30px;
+            padding: 25px;
+            margin-bottom: 20px;
+            transition: all 0.3s ease;
+            border: 1px solid #999999;
+        }
+        .drone-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(85, 105, 255, 0.1);
+        }
+        .network-card {
+            background: #F2F2F2;
+            border-radius: 30px;
+            padding: 25px;
+            margin-bottom: 20px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border: 1px solid #999999;
+        }
+        .network-card:hover {
+            border-color: #5569FF;
+        }
+        .network-card.selected {
+            border-color: #5569FF;
+            background-color: rgba(85, 105, 255, 0.1);
+        }
+        .step-content {
+            display: none;
+            padding: 40px;
+            background: #F2F2F2;
+            border-radius: 40px;
+        }
+        .step-content.active {
+            display: block;
+        }
+        .cart-summary {
+            background: #F2F2F2;
+            border-radius: 30px;
+            border: 1px solid #999999;
+        }
+        .button.purchase-btn {
+            background: #5569FF;
+            color: #fff;
+            border-radius: 30px;
+            padding: 15px 30px;
+            font-size: 18px;
+            font-weight: 500;
+            border: none;
+        }
+        .button.purchase-btn:hover {
+            background: #4050CC;
+        }
+    </style>
+</head>
+<body class="slides stack smooth fast stickyScroll animated noPreload">
+    <!-- Navigation -->
+    <nav class="sidebar" data-sidebar-id="1">
+        <div class="close"><svg><use href="assets/svg/icons.svg#close"></use></svg></div>
+        <div class="content">
+            <a href="#" class="logo"><svg width="100" height="30"><use href="assets/svg/icons.svg#logo"></use></svg></a>
+            <ul class="mainMenu margin-top-3">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="purchase-equipment.html" class="selected">Purchase Equipment</a></li>
+                <li><a href="transactions.html">Transactions</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="slide whiteSlide wallpapers-background">
+        <div class="content">
+            <div class="container">
+                <div class="wrap">
+                    <div class="fix-12-12">
+                        <!-- Progress Steps -->
+                        <div class="progress-steps">
+                            <div class="step-indicator">
+                                <div class="step active">
+                                    <div class="step-circle">1</div>
+                                    <div class="step-title">Select Equipment</div>
+                                </div>
+                                <div class="step">
+                                    <div class="step-circle">2</div>
+                                    <div class="step-title">Upgrades</div>
+                                </div>
+                                <div class="step">
+                                    <div class="step-circle">3</div>
+                                    <div class="step-title">Payment Network</div>
+                                </div>
+                                <div class="step">
+                                    <div class="step-circle">4</div>
+                                    <div class="step-title">Confirmation</div>
+                                </div>
+                                <div class="step">
+                                    <div class="step-circle">5</div>
+                                    <div class="step-title">Payment</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Step 1: Select Equipment -->
+                        <div class="step-content active" id="step1">
+                            <h2 class="smallest margin-bottom-2">Choose Drones to Purchase</h2>
+                            
+                            <div class="grid">
+                                <div class="col-8-12 col-tablet-1-1">
+                                    <div class="grid equal">
+                                        <!-- Drone Card -->
+                                        <div class="col-6-12 col-tablet-1-2 col-phablet-1-1">
+                                            <div class="drone-card">
+                                                <img src="assets/images/drone.png" alt="Drone Model X" class="margin-bottom-2" width="100%">
+                                                <h3 class="small bold margin-bottom-1">Drone Model X</h3>
+                                                <p class="opacity-8">High speed, up to 20 hours flight</p>
+                                                <div class="margin-top-2">
+                                                    <span class="bold">500 USDT</span>
+                                                    <a href="#" class="button purchase-btn float-right">Add to Cart</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Cart Summary -->
+                                <div class="col-4-12 col-tablet-1-1">
+                                    <div class="cart-summary">
+                                        <div class="padding-2">
+                                            <h3 class="small bold margin-bottom-2">Cart Summary</h3>
+                                            <div id="cart-items">
+                                                <!-- Cart items will be added dynamically -->
+                                            </div>
+                                            <div class="margin-top-2 margin-bottom-2"><div class="hr gray"></div></div>
+                                            <div class="grid">
+                                                <div class="col-6-12"><span class="bold">Total:</span></div>
+                                                <div class="col-6-12 right"><span class="bold">0 USDT</span></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="center margin-top-4">
+                                <a href="#" class="button purchase-btn" onclick="nextStep()">Continue to Upgrades</a>
+                            </div>
+                        </div>
+
+                        <!-- Additional steps will be added dynamically via JavaScript -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/purchase.js"></script>
+</body>
+</html>

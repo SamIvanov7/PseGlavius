@@ -2,8 +2,14 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0">
-    <title>PseGlavius Shared Center - Register</title>
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <title>Register - Pseglavius Drones Ltd</title>
+    <meta property="og:title" content="Register - Pseglavius Drones Ltd" />
+    <meta name="twitter:title" content="Register - Pseglavius Drones Ltd" />
+    <meta name="description" content="Create your Pseglavius Drones Ltd account and start investing in autonomous drone fleets" />
+    <meta name="og:description" content="Create your Pseglavius Drones Ltd account and start investing in autonomous drone fleets" />
+    <meta name="twitter:description" content="Create your Pseglavius Drones Ltd account and start investing in autonomous drone fleets" />
     <style>
         * {
             margin: 0;
@@ -108,51 +114,252 @@
         .login-text {
             color: rgba(255, 255, 255, 0.7);
         }
+
+        /* New styles */
+        .slides {
+            background-color: #fff;
+        }
+
+        .animated {
+            animation-duration: 0.5s;
+        }
+
+        .noPreload {
+            background-image: none;
+        }
+
+        .side {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #fff;
+            z-index: 1;
+        }
+
+        .navigation {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 100%;
+            text-align: center;
+        }
+
+        .default {
+            background-color: #fff;
+        }
+
+        .slide {
+            position: relative;
+            width: 100%;
+            height: 100vh;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .whiteSlide {
+            background-color: #fff;
+        }
+
+        .wallpapers-background {
+            background-image: url('assets/img/template/wallpapers-5-2-1.jpg');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .content {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 100%;
+            text-align: center;
+        }
+
+        .container {
+            width: 80%;
+            margin: 0 auto;
+        }
+
+        .wrap {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+        }
+
+        .fix-6-12 {
+            width: 50%;
+        }
+
+        .logo {
+            margin-bottom: 20px;
+        }
+
+        .margin-bottom-2 {
+            margin-bottom: 20px;
+        }
+
+        .center {
+            text-align: center;
+        }
+
+        .pad {
+            padding: 20px;
+        }
+
+        .padding-top-3 {
+            padding-top: 30px;
+        }
+
+        .shadow {
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .selected {
+            background-color: #fff;
+        }
+
+        .ae-3 {
+            animation-delay: 0.3s;
+        }
+
+        .rounded-40 {
+            border-radius: 40px;
+        }
+
+        .slides-form {
+            width: 100%;
+        }
+
+        .label {
+            margin-bottom: 10px;
+        }
+
+        .opacity-5 {
+            opacity: 0.5;
+        }
+
+        .rounded-20 {
+            border-radius: 20px;
+        }
+
+        .wide {
+            width: 100%;
+        }
+
+        .ae-4 {
+            animation-delay: 0.4s;
+        }
+
+        .ae-5 {
+            animation-delay: 0.5s;
+        }
+
+        .margin-top-2 {
+            margin-top: 20px;
+        }
+
+        .ae-6 {
+            animation-delay: 0.6s;
+        }
+
+        .ae-7 {
+            animation-delay: 0.7s;
+        }
+
+        .ae-8 {
+            animation-delay: 0.8s;
+        }
+
+        .ae-9 {
+            animation-delay: 0.9s;
+        }
+
+        .ae-10 {
+            animation-delay: 1s;
+        }
+
+        .ae-11 {
+            animation-delay: 1.1s;
+        }
+
+        .ae-12 {
+            animation-delay: 1.2s;
+        }
+
+        .ae-13 {
+            animation-delay: 1.3s;
+        }
+
+        .blue {
+            color: #007AFF;
+        }
+
+        .background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            background-position: center;
+            z-index: -1;
+        }
     </style>
 </head>
-<body>
+<body class="slides animated noPreload">
+<nav class="side">
+  <div class="navigation default">
+    <ul></ul>
+  </div>
+</nav>
+
+<!-- Registration Section -->
+<section data-cid="slide-42" class="slide whiteSlide wallpapers-background">
+  <div class="content">
     <div class="container">
-        <h1>PseGlavius Shared Center</h1>
-        <p class="subtitle">Scientific financial management and wise investment</p>
-
-        <div class="input-group">
-            <input type="tel" placeholder="Cell-phone number">
+      <div class="wrap">
+        <div class="fix-6-12">
+          <div class="logo margin-bottom-2 center">
+            <a href="index.html">
+              <img src="assets/img/template/wallpapers-5-2-1.jpg" alt="Pseglavius Drones Ltd Logo" width="50" height="50">
+            </a>
+          </div>
+          <h1 class="smaller margin-bottom-2 center">Create Account</h1>
+          <div class="pad padding-top-3 shadow selected ae-3 rounded-40">
+            <form class="slides-form" action="#" method="post" autocomplete="on">
+              <div class="label ae-3"><label class="opacity-5" for="email42">Email Address</label></div>
+              <input class="rounded-20 wide ae-4" id="email42" type="email" name="email" placeholder="Enter your email address" required/>
+              
+              <div class="label ae-5 margin-top-2"><label class="opacity-5" for="username42">Username</label></div>
+              <input class="rounded-20 wide ae-6" id="username42" type="text" name="username" placeholder="Choose a username" required/>
+              
+              <div class="label ae-7 margin-top-2"><label class="opacity-5" for="password42">Password</label></div>
+              <input class="rounded-20 wide ae-8" id="password42" type="password" name="password" placeholder="Create a password" required/>
+              
+              <div class="label ae-9 margin-top-2"><label class="opacity-5" for="password42confirm">Confirm Password</label></div>
+              <input class="rounded-20 wide ae-10" id="password42confirm" type="password" name="password_confirm" placeholder="Confirm your password" required/>
+              
+              <label class="ae-11 margin-top-2">
+                <input type="checkbox" name="terms" required>
+                <span class="small opacity-8">I agree to the <a href="#" class="blue">Terms of Service</a> and <a href="#" class="blue">Privacy Policy</a></span>
+              </label>
+              
+              <button type="submit" class="button blue rounded-40 wide ae-12 margin-top-3">Create Account</button>
+            </form>
+          </div>
+          <p class="margin-top-3 small center ae-13">
+            <span class="opacity-8">Already have an account?</span> 
+            <a href="login.html" class="blue">Login</a>
+          </p>
         </div>
-
-        <div class="input-group">
-            <input type="password" placeholder="Password">
-            <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBkPSJNMTIgNGMtNC40MTggMC04IDMuNTgyLTggOHMzLjU4MiA4IDggOCA4LTMuNTgyIDgtOC0zLjU4Mi04LTgtOHptMCAxNGMtMy4zMTQgMC02LTIuNjg2LTYtNnMyLjY4Ni02IDYtNiA2IDIuNjg2IDYgNi0yLjY4NiA2LTYgNnoiLz48L3N2Zz4=" class="toggle-password" alt="Toggle password">
-        </div>
-
-        <div class="input-group">
-            <input type="password" placeholder="Confirm password">
-            <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBkPSJNMTIgNGMtNC40MTggMC04IDMuNTgyLTggOHMzLjU4MiA4IDggOCA4LTMuNTgyIDgtOC0zLjU4Mi04LTgtOHptMCAxNGMtMy4zMTQgMC02LTIuNjg2LTYtNnMyLjY4Ni02IDYtNiA2IDIuNjg2IDYgNi0yLjY4NiA2LTYgNnoiLz48L3N2Zz4=" class="toggle-password" alt="Toggle password">
-        </div>
-
-        <div class="input-group">
-            <input type="password" placeholder="Transaction password">
-            <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBkPSJNMTIgNGMtNC40MTggMC04IDMuNTgyLTggOHMzLjU4MiA4IDggOCA4LTMuNTgyIDgtOC0zLjU4Mi04LTgtOHptMCAxNGMtMy4zMTQgMC02LTIuNjg2LTYtNnMyLjY4Ni02IDYtNiA2IDIuNjg2IDYgNi0yLjY4NiA2LTYgNnoiLz48L3N2Zz4=" class="toggle-password" alt="Toggle password">
-        </div>
-
-        <div class="input-group">
-            <input type="text" placeholder="full name">
-        </div>
-
-        <div class="input-group">
-            <input type="text" value="22596" readonly>
-        </div>
-
-        <div class="input-group verification-container">
-            <input type="text" placeholder="Verification code">
-            <div class="captcha">2369</div>
-        </div>
-
-        <button class="register-button">Register Now</button>
-
-        <div class="login-link-container">
-            <span class="login-text">Do you already have an account?</span>
-            <a href="login.html">Go login</a>
-        </div>
+      </div>
     </div>
+  </div>
+  <div class="background">
+    <img src="assets/img/template/wallpapers-7-3.jpg" alt="Background" class="rounded-40">
+  </div>
+</section>
 </body>
 </html>
